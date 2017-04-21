@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6622AAED1EAAB7080082D9D8 /* ArrayTiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622AAEC1EAAB7080082D9D8 /* ArrayTiles.swift */; };
+		6622AAEF1EAAB7210082D9D8 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622AAEE1EAAB7210082D9D8 /* Tile.swift */; };
+		6622AAF71EAAC8520082D9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6622AAF61EAAC8520082D9D8 /* Main.storyboard */; };
+		6622AAF91EAAC8610082D9D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622AAF81EAAC8610082D9D8 /* ViewController.swift */; };
 		6694E4981EAA80EB0018E280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694E4971EAA80EB0018E280 /* AppDelegate.swift */; };
-		6694E49A1EAA80EB0018E280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694E4991EAA80EB0018E280 /* ViewController.swift */; };
-		6694E49D1EAA80EB0018E280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6694E49B1EAA80EB0018E280 /* Main.storyboard */; };
 		6694E4A01EAA80EB0018E280 /* MemoryGameSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6694E49E1EAA80EB0018E280 /* MemoryGameSwift.xcdatamodeld */; };
 		6694E4A21EAA80EB0018E280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6694E4A11EAA80EB0018E280 /* Assets.xcassets */; };
 		6694E4A51EAA80EB0018E280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6694E4A31EAA80EB0018E280 /* LaunchScreen.storyboard */; };
@@ -35,10 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6622AAEC1EAAB7080082D9D8 /* ArrayTiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTiles.swift; sourceTree = "<group>"; };
+		6622AAEE1EAAB7210082D9D8 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		6622AAF61EAAC8520082D9D8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6622AAF81EAAC8610082D9D8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6694E4941EAA80EB0018E280 /* MemoryGameSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGameSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6694E4971EAA80EB0018E280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6694E4991EAA80EB0018E280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6694E49C1EAA80EB0018E280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6694E49F1EAA80EB0018E280 /* MemoryGameSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MemoryGameSwift.xcdatamodel; sourceTree = "<group>"; };
 		6694E4A11EAA80EB0018E280 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6694E4A41EAA80EB0018E280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				6694E4971EAA80EB0018E280 /* AppDelegate.swift */,
-				6694E4991EAA80EB0018E280 /* ViewController.swift */,
-				6694E49B1EAA80EB0018E280 /* Main.storyboard */,
+				6622AAEE1EAAB7210082D9D8 /* Tile.swift */,
+				6622AAF81EAAC8610082D9D8 /* ViewController.swift */,
+				6622AAF61EAAC8520082D9D8 /* Main.storyboard */,
+				6622AAEC1EAAB7080082D9D8 /* ArrayTiles.swift */,
 				6694E4A11EAA80EB0018E280 /* Assets.xcassets */,
 				6694E4A31EAA80EB0018E280 /* LaunchScreen.storyboard */,
 				6694E4A61EAA80EB0018E280 /* Info.plist */,
@@ -196,7 +202,6 @@
 				TargetAttributes = {
 					6694E4931EAA80EB0018E280 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = J3CFNMPAA6;
 						ProvisioningStyle = Automatic;
 					};
 					6694E4AA1EAA80EB0018E280 = {
@@ -238,9 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6622AAF71EAAC8520082D9D8 /* Main.storyboard in Resources */,
 				6694E4A51EAA80EB0018E280 /* LaunchScreen.storyboard in Resources */,
 				6694E4A21EAA80EB0018E280 /* Assets.xcassets in Resources */,
-				6694E49D1EAA80EB0018E280 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6694E49A1EAA80EB0018E280 /* ViewController.swift in Sources */,
+				6622AAF91EAAC8610082D9D8 /* ViewController.swift in Sources */,
 				6694E4A01EAA80EB0018E280 /* MemoryGameSwift.xcdatamodeld in Sources */,
+				6622AAEF1EAAB7210082D9D8 /* Tile.swift in Sources */,
 				6694E4981EAA80EB0018E280 /* AppDelegate.swift in Sources */,
+				6622AAED1EAAB7080082D9D8 /* ArrayTiles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +310,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6694E49B1EAA80EB0018E280 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6694E49C1EAA80EB0018E280 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6694E4A31EAA80EB0018E280 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -421,7 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J3CFNMPAA6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MemoryGameSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arslanwaheed.MemoryGameSwift;
@@ -434,7 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J3CFNMPAA6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MemoryGameSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arslanwaheed.MemoryGameSwift;
@@ -520,6 +519,7 @@
 				6694E4C11EAA80EB0018E280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6694E4C21EAA80EB0018E280 /* Build configuration list for PBXNativeTarget "MemoryGameSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +528,7 @@
 				6694E4C41EAA80EB0018E280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6694E4C51EAA80EB0018E280 /* Build configuration list for PBXNativeTarget "MemoryGameSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +537,7 @@
 				6694E4C71EAA80EB0018E280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
