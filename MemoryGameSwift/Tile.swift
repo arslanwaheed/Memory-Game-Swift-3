@@ -8,8 +8,6 @@
 
 import Foundation
 
-//👻🙊🐴🐳🐘🐿☠️😀
-
 class Tile{
     var tileType :String
     var isMatched : Bool

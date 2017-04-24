@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //Variables for storing best time and best move
+    //these are persistent variables
+    var bTime = UserDefaults().integer(forKey: "BESTTIME")
+    var bMove = UserDefaults().integer(forKey: "BESTMOVE")
+    
+    
+    //2d array without initialization
+    var arr : ArrayTiles? = nil
+    
     @IBOutlet weak var firstView: UIView!
     
     @IBAction func levelSelectorButtons(_ sender: UIButton) {
@@ -17,7 +27,6 @@ class ViewController: UIViewController {
         firstView.isHidden = true
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
     }
-    var arr : ArrayTiles? = nil
     
     
     @IBOutlet weak var winningMessageLabel: UILabel!
@@ -29,8 +38,6 @@ class ViewController: UIViewController {
     var gameTimer : Timer!
     var time = 0
     var movesCount = 0
-    var bestMoves : Int? = nil
-    var bestTime : Int? = nil
     
     var selectedButton : UIButton? = nil
     var isSelected : Bool = false
@@ -43,11 +50,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //if playing first time set best moves and time equal to 999
+        if(bTime == 0){
+            UserDefaults.standard.set(999, forKey: "BESTTIME")
+        }
+        if(bMove == 0){
+            UserDefaults.standard.set(999, forKey: "BESTMOVE")
+        }
         winningMessageLabel.isHidden = true
         movesLabel.text = "Moves: 0"
-        bestTimeLabel.text = "Best Time:"
+        bestTimeLabel.text = "Best Time: \(bTime)"
         timeLabel.text = "Time: 0"
-        bestMovesLabel.text = "Best Moves:"
+        bestMovesLabel.text = "Best Moves: \(bMove)"
+        
         
         
     }
@@ -60,6 +75,7 @@ class ViewController: UIViewController {
             indices2 = arr?.buttonClicked(sender)
         }
         
+        //this causes 0.3 seconds delay before executing the code inside it
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.selectedButton == nil {
                 self.selectedButton = sender
@@ -84,13 +100,25 @@ class ViewController: UIViewController {
         }
     }
     
+    //timer controlled function
     func runTimedCode() {
         time += 1
         timeLabel.text = "Time: \(time)"
         if !(arr?.isRemaining())! {
             gameTimer.invalidate()
             winningMessageLabel.isHidden = false
+            
+            //updating persistent variables
+            if(time < bTime){
+                UserDefaults.standard.set(time, forKey: "BESTTIME")
+                bestTimeLabel.text = "Best Time: \(bTime))"
+            }
+            if(movesCount < bMove){
+                UserDefaults.standard.set(movesCount, forKey: "BESTMOVE")
+                bestTimeLabel.text = "Best Time: \(bMove))"
+            }
         }
+        
         
     }
 }
