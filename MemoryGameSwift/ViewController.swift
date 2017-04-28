@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var bTime = UserDefaults().integer(forKey: "BESTTIME")
     var bMove = UserDefaults().integer(forKey: "BESTMOVE")
     
+    @IBOutlet var buttons: [UIButton]!
     
     //2d array without initialization
     var arr : ArrayTiles? = nil
@@ -25,9 +26,24 @@ class ViewController: UIViewController {
         let level = sender.currentTitle
         arr = ArrayTiles(level: level!)
         firstView.isHidden = true
+        time = 0;
+        movesCount = 0
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
     }
     
+    @IBAction func restartButton(_ sender: UIButton) {
+        firstView.isHidden = false
+        gameTimer.invalidate()
+        
+        for button in buttons {
+            button.isHidden = false
+            button.setTitle("", for: .normal)
+        }
+        
+        
+        
+        
+    }
     
     @IBOutlet weak var winningMessageLabel: UILabel!
     @IBOutlet weak var movesLabel: UILabel!
@@ -57,6 +73,7 @@ class ViewController: UIViewController {
         if(bMove == 0){
             UserDefaults.standard.set(999, forKey: "BESTMOVE")
         }
+        
         winningMessageLabel.isHidden = true
         movesLabel.text = "Moves: 0"
         bestTimeLabel.text = "Best Time: \(bTime)"

@@ -46,7 +46,7 @@ class ArrayTiles{
     init(level : String) {
         
         switch level {
-        case "HARD" :
+        case "hard" :
             arrayHard.shuffle()
             var count = 0
             for row in 0..<rows {
@@ -57,7 +57,7 @@ class ArrayTiles{
                 }
                 
             }
-        case "MEDIUM" :
+        case "medium" :
             arrayMed.shuffle()
             var count = 0
             for row in 0..<rows {
@@ -66,7 +66,7 @@ class ArrayTiles{
                     count += 1
                 }
             }
-        case "EASY" :
+        case "easy" :
             arrayEasy.shuffle()
             var count = 0
             for row in 0..<rows {
