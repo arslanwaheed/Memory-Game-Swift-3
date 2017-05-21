@@ -104,30 +104,11 @@ class ArrayTiles{
  
     func buttonClicked(_ sender : UIButton) -> (Int,Int)? {
         let tag = sender.tag
+        let row : Int = tag / 5
+        let col : Int = tag % 5
         
-        switch tag {
-        case 0...4 :
-            sender.setTitle(self.matrix[0][(tag%5)].tileType, for: .normal)
-            return (0,tag%5)
-        case 5...9 :
-            sender.setTitle(self.matrix[1][(tag%5)].tileType, for: .normal)
-            return (1,tag%5)
-        case 10...14 :
-            sender.setTitle(self.matrix[2][(tag%5)].tileType, for: .normal)
-            return (2,tag%5)
-        case 15...19 :
-            sender.setTitle(self.matrix[3][(tag%5)].tileType, for: .normal)
-            return (3,tag%5)
-        case 20...24 :
-            sender.setTitle(self.matrix[4][(tag%5)].tileType, for: .normal)
-            return (4,tag%5)
-        case 25...29 :
-            sender.setTitle(self.matrix[5][(tag%5)].tileType, for: .normal)
-            return (5,tag%5)
-        default :
-            sender.isHidden = true
-        }
-        return nil
+        sender.setTitle(self.matrix[row][col].tileType, for: .normal)
+        return (row,col)
     }
  
 }

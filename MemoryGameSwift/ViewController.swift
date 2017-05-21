@@ -135,8 +135,6 @@ class ViewController: UIViewController {
                 bestTimeLabel.text = "Best Time: \(bMove))"
             }
         }
-        
-        
     }
 }
 
